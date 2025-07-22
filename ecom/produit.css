@@ -92,7 +92,7 @@ nav input:focus {
     height: 100%;
     background-repeat:no-repeat ;
     background-size: cover;
-    background-image: url('/ecom/img/Gemini_Generated_Image_kc7wqskc7wqskc7w.png');
+    background-image: url('/img/Gemini_Generated_Image_kc7wqskc7wqskc7w.png');
 }
 .heading{
     margin: 2rem auto;
@@ -150,7 +150,7 @@ nav input:focus {
 .hero {
      background-repeat:no-repeat ;
     background-size: cover;
-    background-image: url('/ecom/img/Gemini_Generated_Image_kyk15jkyk15jkyk1.png');
+    background-image: url('/img/Gemini_Generated_Image_kyk15jkyk15jkyk1.png');
 }
 .heading span{
     margin-right: 1.9rem;
