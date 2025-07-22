@@ -1,0 +1,234 @@
+:root {
+    --principal: #f8f8ff;
+    --secondaire: #100c08;
+    --ternaire: #00bfff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: var(--secondaire);
+}
+
+main {
+    width: 100%;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+/* --- HEADER & NAVIGATION --- */
+header {
+    width: 95%;
+    max-width: 1400px;
+    margin: 1.5rem auto;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px var(--shadow);
+    border-radius: 50px;
+    background-color: var(--principal);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.logo h1 {
+    font-family: 'Courier Prime', monospace;
+    font-size: 2.8rem;
+    margin: 0;
+    color: var(--ternaire);
+}
+
+nav .menu {
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu a {
+    font-family: 'Courier Prime', monospace;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--secondaire);
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu a:hover {
+    background-color: var(--ternaire);
+    color: var(--principal);
+}
+
+nav input {
+    font-size: 1.6rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 20px;
+    border: 2px solid var(--ternaire);
+    width: 150px;
+    transition: width 0.4s ease-in-out;
+}
+
+nav input:focus {
+    width: 250px;
+    outline-color: var(--ternaire);
+}
+
+/* --- SECTIONS & TITLES --- */
+.presentation, .featured-products, .categories-section {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.presentation h1, .presentation h2 {
+    font-family: 'Courier Prime', monospace;
+}
+
+.presentation h2 {
+    font-size: 2.8rem;
+    font-weight: 400;
+}
+
+.presentation p {
+    font-size: 1.8rem;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+.presentation h1 {
+    display: inline-block;
+    font-size: 3.2rem;
+    color: var(--principal);
+    background-color: var(--secondaire);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+}
+
+/* --- PRODUCT CARD & GRID --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.card {
+    background-color: var(--principal);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px var(--shadow);
+}
+
+.card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+    flex-grow: 1; /* Pousse le footer vers le bas */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body h4 {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+.card-body .description {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.card-body .score {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.card-footer {
+    padding: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--principal);
+    background-color: var(--secondaire);
+    border: none;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--ternaire);
+}
+
+/* --- CATEGORIES SECTION --- */
+.categories-section .descri-cat {
+    font-size: 1.8rem;
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+}
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.category-box {
+    text-align: center;
+}
+
+.category-box h2 {
+    font-size: 3rem;
+    font-family: 'Courier Prime', monospace;
+    margin-bottom: 2rem;
+}
+
+.category-box .card {
+    margin-bottom: 2rem;
+}
+
+/* --- RESPONSIVE FOR SMALL SCREENS --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    nav input {
+        width: 90%;
+    }
+    .presentation, .featured-products, .categories-section {
+        padding: 3rem 1rem;
+    }
+}
